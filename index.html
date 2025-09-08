@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<meta charset="unf-8" />
-<link rel="stylesheet" href="./index.css" />
-<title>QWIRTY</title>
-<header>
-  <nav class="main-nav">
-    <p>QWIRTYSHOP</p>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Careers</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <aside>
-    <ul>
-      <button class="my-button">Clothes</button>
-      <button class="my-button">Shoes</button>
-      <button class="my-button">Accessories</button>
-      <button class="my-button">Kids</button>
-      <button class="my-button">Electronics</button>
-      <button class="my-button">Toys & Games</button>
-      <button class="my-button">Home & Garden</button>
-      <button class="my-button">Shoes</button>
-    </ul>
-  </aside>
-</main>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./products.css" />
+    <link rel="stylesheet" href="./buttons.css" />
+    <title>QWIRTY</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <p class="logo">QWIRTYSHOP</p>
+        <form class="search-form">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <ul>
+          <li><button class="my-button">Clothes</button></li>
+          <li><button class="my-button">Shoes</button></li>
+          <li><button class="my-button">Accessories</button></li>
+          <li><button class="my-button">Kids</button></li>
+          <li><button class="my-button">Electronics</button></li>
+          <li><button class="my-button">Toys & Games</button></li>
+          <li><button class="my-button">Home & Garden</button></li>
+          <li><button class="my-button">Pets</button></li>
+          <li><button class="my-button">Sports & Outdoors</button></li>
+        </ul>
+      </aside>
+      <section class="content">
+        <!-- product grid will go here in step 2 -->
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Blue T-Shirt" />
+            <h3 class="product-title">Blue T-Shirt</h3>
+            <p class="product-price">$19.99</p>
+            <button class="add-to-cart" type="button">Add to Cart</button>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
