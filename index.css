@@ -8,25 +8,34 @@ body {
 }
 
 .logo {
-  font-size: 60px;
-  letter-spacing: 10px;
-  margin-top: 0.75%;
-  margin-right: 0.5%;
-  margin-left: 1%;
-  height: 60px;
-  color: #000000;
-  font-style: italic;
+  font-size: clamp(40px, 6vw, 100px);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 2px;
+  flex: 0 0 auto;
+}
+
+.logo,
+.slogan {
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 main {
   display: flex;
   gap: 40px;
+  padding-top: 220px;
 }
 
 aside {
   width: 240px;
   position: sticky;
-  top: 10px;
+  top: 250px;
   align-self: flex-start;
 }
 
@@ -50,7 +59,7 @@ p {
 
 .nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-basis: 40%;
   font-size: 20px;
   margin-left: 1%;
@@ -62,8 +71,17 @@ p {
   padding: 5px;
 }
 
+.slogan {
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #333;
+  margin-top: 2px;
+}
+
 .nav-links li {
   list-style: none;
+  margin-right: 15px;
 }
 
 aside ul {
@@ -73,7 +91,7 @@ aside ul {
   gap: 10px;
   list-style: none;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 aside button {
@@ -93,8 +111,149 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  background-color: #9d9c99;
+  height: auto;
+  background-color: #eab5b5bf;
   box-shadow: 0 2px 5px black;
   z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-end;
+  padding: 5px 20px;
+
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0;
+}
+
+footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #eab5b5bf;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  min-width: 200px;
+  max-width: 400px;
+  margin-right: 80px;
+}
+
+.search-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0 2px 5px black;
+  flex: 1;
+}
+
+.search-form button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #eab5b5bf;
+  color: rgb(0, 0, 0);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 2px 5px black;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.search-form button:hover {
+  background-color: #acd0f9;
+}
+
+.search-form button:active {
+  background-color: #bceaa4;
+  border-color: #000000;
+}
+
+@media (max-width: 900px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 50px;
+  }
+
+  .search-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  aside {
+    width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-links {
+    flex-basis: auto;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  main {
+    flex-direction: column;
+    padding-top: 220px;
+  }
+
+  aside {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  aside ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  aside button {
+    flex: 1 1 auto;
+    width: auto;
+  }
 }

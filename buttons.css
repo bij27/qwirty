@@ -1,5 +1,5 @@
 .my-button {
-  background-color: #eab5b5;
+  background-color: #eab5b5bf;
   color: rgb(0, 0, 0);
   border-color: rgb(18, 18, 17);
   box-shadow: 0 2px 5px black;
@@ -16,44 +16,10 @@
   border-color: #000000;
 }
 
-.search-form {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 20px;
-}
 
-.search-form input {
-  width: 400px;
-  max-width: 500px;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-  box-shadow: 0 2px 5px black;
-}
-
-.search-form button {
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  background-color: #eab5b5;
-  color: rgb(0, 0, 0);
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 2px 5px black;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.search-form button:hover {
-  background-color: #acd0f9;
-}
-
-.search-form button:active {
-  background-color: #bceaa4;
-  border-color: #000000;
-}
 
 .add-to-cart {
-  background-color: #eab5b5;
+  background-color: #eab5b5bf;
   color: #000000;
   border: 1px solid #121211;
   border-radius: 8px;
@@ -72,4 +38,25 @@
 .add-to-cart:active {
   background-color: #bceaa4;
   border-color: #000000;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #bceaa4;
 }
